@@ -23,7 +23,7 @@ COPY mirror.list /etc/apt/mirror.list
 RUN mkdir -p /var/www/html/ubuntu/var
 RUN cp /var/spool/apt-mirror/var/postmirror.sh /var/www/html/ubuntu/var
 
-RUN apt-mirror
+# RUN apt-mirror
 
 RUN service apache2 start
 # Copy apt-mirror-cron file to the cron.d directory
