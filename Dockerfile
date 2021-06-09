@@ -29,4 +29,10 @@ RUN service apache2 start
 # Copy apt-mirror-cron file to the cron.d directory
 COPY apt-mirror-cron /etc/cron.d/apt-mirror-cron
 
+RUN chmod 0644 /etc/cron.d/apt-mirror-cron
+RUN crontab /etc/cron.d/apt-mirror-cron
+
+COPY cnf.sh /cnf.sh
+
+
 CMD ["cron", "-f"]

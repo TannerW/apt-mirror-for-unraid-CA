@@ -2,8 +2,9 @@
 set base_path    /var/www/html/ubuntu
 set nthreads     30
 set _tilde 0
+set limit_rate 500k
 ############# end config ##############
-deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu focal-security main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse
-clean http://archive.ubuntu.com/ubuntu
+deb http://us.archive.ubuntu.com/ubuntu focal main restricted universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu focal-security main restricted universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse
+clean http://us.archive.ubuntu.com/ubuntu
