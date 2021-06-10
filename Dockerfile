@@ -34,5 +34,8 @@ RUN crontab /etc/cron.d/apt-mirror-cron
 
 COPY cnf.sh /cnf.sh
 
+RUN /bin/bash /cnf.sh
+
+RUN cp -av us.archive.ubuntu.com  /var/www/html/ubuntu/mirror/
 
 CMD ["cron", "-f"]
